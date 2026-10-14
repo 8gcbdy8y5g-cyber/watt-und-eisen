@@ -1,5 +1,5 @@
 /* watt & eisen: Offline-Hülle. Seite und Icons werden zwischengespeichert, Daten nie (die kommen von GitHub). */
-var V = 'we-shell-d57d47e0';
+var V = 'we-shell-b2d7e33a';
 var SHELL = ['./', 'index.html', 'gh-db.js', 'manifest.webmanifest', 'icon-180.png', 'icon-192.png', 'icon-512.png'];
 self.addEventListener('install', function (e) {
   e.waitUntil(caches.open(V).then(function (c) { return c.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
