@@ -209,14 +209,14 @@
       if (overlay) overlay.remove();
       overlay = document.createElement('div');
       overlay.id = 'we-token'; overlay.setAttribute('role', 'dialog'); overlay.setAttribute('aria-modal', 'true');
-      overlay.style.cssText = 'position:fixed;inset:0;z-index:99999;background:#0B1428;color:#fff;display:flex;align-items:center;justify-content:center;padding:24px;font-family:"Inter Tight",-apple-system,BlinkMacSystemFont,sans-serif';
+      overlay.style.cssText = 'position:fixed;inset:0;z-index:99999;background:#FFFFFF;color:#1D1D1F;display:flex;align-items:center;justify-content:center;padding:24px;font-family:"Plus Jakarta Sans",-apple-system,BlinkMacSystemFont,sans-serif';
       overlay.innerHTML = '<form style="max-width:420px;width:100%;display:grid;gap:14px">'
-        + '<div style="font:800 26px/1.1 \'Inter Tight\',sans-serif;letter-spacing:-.01em">watt &amp; eisen</div>'
-        + '<p style="margin:0;color:#A3AEC6;font-size:15px;line-height:1.45">' + esc(msg || 'Damit die App deine Daten laden kann, braucht sie einmal den Zugangs-Token für dein privates Datenrepo. Er bleibt nur auf diesem Gerät gespeichert.') + '</p>'
-        + '<input name="t" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="github_pat_…" aria-label="Zugangs-Token" style="font:500 16px \'JetBrains Mono\',monospace;padding:14px;border-radius:12px;border:1px solid #3B4C73;background:#101B33;color:#fff;min-width:0">'
-        + '<button type="submit" style="font:800 16px \'Inter Tight\',sans-serif;padding:14px;border:0;border-radius:12px;background:#F97316;color:#0B1428">Verbinden</button>'
-        + '<div class="e" role="status" style="color:#FCA5A5;font-size:14px;min-height:18px"></div>'
-        + '<a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener" style="color:#A3AEC6;font-size:14px">Token bei GitHub erstellen</a>'
+        + '<div style="font:700 28px/1.15 \'Plus Jakarta Sans\',sans-serif;letter-spacing:-.02em">watt &amp; eisen</div>'
+        + '<p style="margin:0;color:#6E6E73;font-size:15px;line-height:1.45">' + esc(msg || 'Damit die App deine Daten laden kann, braucht sie einmal den Zugangs-Token für dein privates Datenrepo. Er bleibt nur auf diesem Gerät gespeichert.') + '</p>'
+        + '<input name="t" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="github_pat_…" aria-label="Zugangs-Token" style="font:500 16px ui-monospace,Menlo,monospace;padding:14px;border-radius:12px;border:0;background:#F5F5F7;color:#1D1D1F;min-width:0;min-height:48px">'
+        + '<button type="submit" style="font:700 16px \'Plus Jakarta Sans\',sans-serif;padding:14px;border:0;border-radius:12px;background:#C2410C;color:#FFFFFF;min-height:48px">Verbinden</button>'
+        + '<div class="e" role="status" style="color:#C2410C;font-size:14px;min-height:18px"></div>'
+        + '<a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener" style="color:#6E6E73;font-size:14px">Token bei GitHub erstellen</a>'
         + '</form>';
       document.body.appendChild(overlay);
       var f = overlay.querySelector('form'), e = overlay.querySelector('.e'), btn = f.querySelector('button');
@@ -258,8 +258,8 @@
   function addons() {
     var coach = document.getElementById('coach');
     if (coach && !coach.querySelector('.we-trainer')) {
-      var p = document.createElement('p'); p.className = 'we-trainer'; p.style.cssText = 'margin:10px 0 0;font-size:14px;line-height:1.4;color:var(--ink2,#A3AEC6)';
-      p.innerHTML = 'Fragen an den Trainer stellst du im Chat. <a href="' + TRAINER_URL + '" target="_blank" rel="noopener" style="color:var(--accent,#F97316);font-weight:700;white-space:nowrap">Trainer öffnen</a>';
+      var p = document.createElement('p'); p.className = 'we-trainer'; p.style.cssText = 'margin:10px 0 0;font-size:14px;line-height:1.4;color:var(--ink2,#6E6E73)';
+      p.innerHTML = 'Fragen an den Trainer stellst du im Chat. <a href="' + TRAINER_URL + '" target="_blank" rel="noopener" style="color:var(--accent,#C2410C);font-weight:700;white-space:nowrap">Trainer öffnen</a>';
       coach.appendChild(p);
     }
     var card = document.querySelector('#dataWrap .datacard');
